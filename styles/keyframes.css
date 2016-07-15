@@ -1,0 +1,328 @@
+/*Animation*/
+@keyframes go-one{ 0% {transform: none} 100% {transform: translateY(50px)} }
+@keyframes go-two{ 0% {transform: none} 100% {transform: translateY(-50px)} }
+
+@keyframes rotating {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateX(-1300px);
+    }
+}
+
+@keyframes walk {
+    0% {
+        transform: scale(.1);
+        top: -130px;
+        left: 200px;
+    }
+    2.5% {
+        background-position: 0 0;
+    }
+    2.501% {
+        background-position: -130px 0;
+    }
+    5% {
+        background-position: -130px 0;
+    }
+    5.001% {
+        background-position: 0 0;
+    }
+    7.5% {
+        background-position: 0 0;
+    }
+    7.501% {
+        background-position: -130px 0;
+    }
+    10% {
+        background-position: -130px 0;
+    }
+    10.001% {
+        background-position: 0 0;
+    }
+    12.5% {
+        background-position: 0 0;
+    }
+    12.501% {
+        background-position: -130px 0;
+    }
+    15% {
+        background-position: -130px 0;
+    }
+    15.001% {
+        background-position: 0 0;
+    }
+    17.5% {
+        background-position: 0 0;
+    }
+    17.501% {
+        background-position: -130px 0;
+    }
+    20% {
+        background-position: -130px 0;
+    }
+    20.001% {
+        background-position: 0 0;
+    }
+    22.5% {
+        background-position: 0 0;
+    }
+    22.501% {
+        background-position: -130px 0;
+    }
+    25% {
+        background-position: -130px 0;
+    }
+    25.001% {
+        background-position: 0 0;
+    }
+    27.5% {
+        background-position: 0 0;
+    }
+    27.501% {
+        background-position: -130px 0;
+    }
+    30% {
+        background-position: -130px 0;
+    }
+    30.001% {
+        background-position: 0 0;
+    }
+    32.5% {
+        background-position: 0 0;
+    }
+    32.501% {
+        background-position: -130px 0;
+    }
+    35% {
+        background-position: -130px 0;
+    }
+    35.001% {
+        background-position: 0 0;
+    }
+    37.5% {
+        background-position: 0 0;
+    }
+    37.501% {
+        background-position: -130px 0;
+    }
+    40% {
+        transform: scale(1.5);
+        top: 150px;
+        left: 200px;
+        background-position: -130px 0;
+    }
+    40.001% {
+        background-position: -1px -128px;
+    }
+    42.5% {
+        background-position: -1px -128px;
+    }
+    40.001% {
+        background-position: -129px -128px;
+    }
+    42.5% {
+        background-position: -129px -128px;
+    }
+    42.501% {
+        background-position: -1px -128px;
+    }
+    45% {
+        background-position: -1px -128px;
+    }
+    45.001% {
+        background-position: -129px -128px;
+    }
+    47.5% {
+
+        background-position: -129px -128px;
+    }
+    47.501% {
+        background-position: -1px -128px;
+    }
+    50% {
+        background-position: -1px -128px;
+    }
+    50.001% {
+        background-position: -129px -128px;
+    }
+    52.5% {
+        background-position: -129px -128px;
+    }
+    52.501% {
+        background-position: -1px -128px;
+    }
+    55% {
+        transform: scale(1.5);
+        top: 150px;
+        left: 800px;
+        background-position: -1px -128px;
+    }
+    55.001% {
+        background-position: -2px -192px;
+    }
+    57.5% {
+        background-position: -2px -192px;
+    }
+    57.501% {
+        background-position: -130px -192px;
+    }
+    60% {
+        background-position: -130px -192px;
+    }
+    60.001% {
+        background-position: -2px -192px;
+    }
+    62.5% {
+        background-position: -2px -192px;
+    }
+    62.501% {
+        background-position: -130px -192px;
+    }
+    65% {
+        background-position: -130px -192px;
+        top: 120px;
+    }
+    65.001% {
+        opacity: 1;
+        background-position: -2px -192px;
+    }
+    68% {
+        opacity: 0;
+        transform: scale(1);
+        background-position: -2px -192px;
+    }
+    100% {
+        opacity: 0;
+        top: 120px;
+        left: 800px;
+    }
+}
+
+@keyframes ride {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateX(1600px);
+    }
+}
+
+@keyframes imprinting {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes rotating-bar {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: rotate(-860deg);
+        bottom: 300px;
+        right: 50px;
+        width: 60px;
+        height: 90px;
+        background: url("../images/barrel-fire.png") 0 0;
+    }
+    50.01% {
+        transform: rotate(-860deg);
+        background: url("../images/barrel-fire.png") -60px 0;
+        width: 70px;
+        height: 70px;
+        bottom: 300px;
+        right: 50px;
+    }
+    75% {
+        transform: rotate(-860deg) scale(4);
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: rotate(-860deg) scale(2);
+        background: url("../images/barrel-fire.png") -60px 0;
+        bottom: 300px;
+        right: 50px;
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes throw {
+    0% {
+        transform: rotate(30deg);
+        visibility: visible;
+    }
+    15% {
+        transform: rotate(1280deg);
+        width: 600px;
+        height: 600px;
+        top: -320px;
+        right: 300px;
+    }
+    100% {
+        transform: translateY(1000px);
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@keyframes crash {
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes quake {
+    0% {
+        top: 0;
+    }
+    10% {
+        top: 25px;
+    }
+    20% {
+        top: 0;
+    }
+    30% {
+        top: 20px;
+    }
+    40% {
+        top: 0;
+    }
+    50% {
+        top: 15px;
+    }
+    60% {
+        top: 0;
+    }
+    70% {
+        top: 10px;
+    }
+    80% {
+        top: 0;
+    }
+    90% {
+        top: 5px;
+    }
+    100% {
+        top: 0;
+    }
+}

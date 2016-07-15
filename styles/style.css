@@ -1,0 +1,569 @@
+@import "keyframes.css";
+
+body {
+    margin: 0;
+    background: fixed url("../images/fence.png") bottom repeat-x;
+    position: relative;
+    font: 20px 'Ranchers', cursive;
+}
+.space {
+    position: relative;
+    top: 0;
+    width: 1150px;
+    margin: auto;
+    overflow: hidden;
+    animation: quake 1s 17s ease;
+}
+.info {
+    position: absolute;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    color: #fff;
+    opacity: .6;
+    transition: opacity .3s ease;
+}
+.info:hover {
+    opacity: 1;
+}
+.info span {
+    font-size: 1.3em;
+}
+.info:active + .information {
+    display: block;
+}
+.information,
+.end {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2em;
+}
+.information {
+    display: none;
+    z-index: 5;
+    top: 250px;
+}
+.end {
+    visibility: hidden;
+    z-index: 6;
+    animation: crash .1s 20s forwards;
+    top: 280px;
+}
+.end span {
+    font-size: 1.5em;
+}
+
+/* --------------------------- Header --------------------------- */
+header {
+    text-align: center;
+    height: 450px;
+    background-color: #42ADFF;
+    position: relative;
+}
+.cloud {
+    background: url("../images/cloud.png");
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.cloud-one {
+    animation: go-one 3s ease-in-out 0.5s infinite alternate both;
+    width: 200px;
+    height: 120px;
+    z-index: 4;
+}
+.cloud-two {
+    margin-left: 50px;
+    animation: go-two 2s ease-in-out 0.2s infinite alternate both;
+    width: 100px;
+    height: 60px;
+    top: 15px;
+}
+.cloud-three {
+    margin-left: 35px;
+    animation: go-one 2.5s ease-in-out 0.3s infinite alternate both;
+    width: 150px;
+    height: 90px;
+    top: -10px;
+}
+.cloud-four {
+    margin-left: 20px;
+    animation: go-two 1.5s ease-in-out 0s infinite alternate both;
+    width: 50px;
+    height: 30px;
+    top: 0;
+}
+.cloud-five {
+    margin-left: 28px;
+    animation: go-one 3.5s ease-in-out 0.7s infinite alternate both;
+    width: 230px;
+    height: 125px;
+    top: 10px;
+    z-index: 4;
+}
+.cloud-six {
+    margin-left: 48px;
+    animation: go-one 2.2s ease-in-out 0.1s infinite alternate both;
+    width: 70px;
+    height: 42px;
+    top: -40px;
+}
+.cloud-seven {
+    margin-left: 12px;
+    animation: go-one 2.8s ease-in-out 0.25s infinite alternate both;
+    width: 120px;
+    height: 72px;
+    top: -10px;
+}
+.sun {
+    animation: rotating 15s linear 0s infinite;
+    width: 120px;
+    height: 120px;
+    background: url("../images/sun.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    right: 180px;
+    z-index: 0;
+    cursor: pointer;
+}
+.sun:hover + .smile,
+.smile:hover {
+    opacity: .9;
+}
+.smile {
+    position: absolute;
+    top: 44px;
+    right: 205px;
+    width: 68px;
+    height: 63px;
+    background: url("../images/smile.png");
+    border-radius: 100%;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+.forest {
+    width: 100%;
+    height: 200px;
+    background: url("../images/forest.png");
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+}
+.plane {
+    animation: fly 10s 1s linear;
+    width: 80px;
+    height: 50px;
+    background: url("../images/plane.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 100px;
+    right: -100px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 30px;
+}
+.plane-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    padding-top: 35px;
+    text-align: center;
+    bottom: 30px;
+    left: 70px;
+    font-size: 0;
+    background: url("../images/message.png");
+    transition: opacity, width, height .5s ease;
+}
+.plane-msg::before {
+    content: "I'm flying!";
+}
+.plane:hover .plane-msg {
+    opacity: 1;
+    width: 180px;
+    height: 110px;
+    font-size: 1em;
+    transition: all .5s ease;
+}
+
+/* --------------------------- Footer --------------------------- */
+footer {
+    height: 400px;
+    background-color: #A2BF35;
+    position: relative;
+}
+.running-cat {
+    position: absolute;
+    width: 70px;
+    height: 55px;
+    background: url("../images/running-cat.gif");
+    top: 200px;
+    left: -250px;
+    animation: ride 16s linear .5s;
+    z-index: 2;
+    cursor: pointer;
+}
+.running-cat-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    padding-top: 35px;
+    text-align: center;
+    bottom: 40px;
+    left: 72px;
+    font-size: 0;
+    background: url("../images/message.png");
+    transition: opacity, width, height .5s ease;
+}
+.running-cat-msg::before {
+    content: "I'm hunting!";
+}
+.running-cat:hover .running-cat-msg {
+    opacity: 1;
+    width: 180px;
+    height: 110px;
+    font-size: 1em;
+    transition: all .5s ease;
+}
+.squirrel {
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    background: url("../images/squirrel.gif");
+    top: 210px;
+    left: -50px;
+    animation: ride 28s ease .5s;
+    z-index: 2;
+}
+.house {
+    width: 500px;
+    height: 300px;
+    background: url("../images/house.png");
+    position: absolute;
+    top: -100px;
+    right: 28px;
+    cursor: pointer;
+    z-index: 1;
+}
+.house:hover .door {
+    visibility: visible;
+}
+.house:hover ~ .lovers {
+    top: -120px;
+    right: 450px;
+}
+.house:hover ~ .cat {
+    right: 70px;
+}
+.house:hover ~ .snow {
+    right: 70px;
+    top: -150px;
+}
+.house:hover ~ .bunny {
+    top: -120px;
+}
+.house-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    padding-top: 50px;
+    text-align: center;
+    bottom: 320px;
+    left: 120px;
+    font-size: 0;
+    background: url("../images/message2.png");
+    transition: opacity, width, height .5s ease;
+}
+.house-msg::before {
+    content: "We're hiding!";
+}
+.house:hover .house-msg {
+    opacity: 1;
+    width: 240px;
+    height: 150px;
+    font-size: 1.2em;
+    transition: all .5s ease;
+}
+.door {
+    position: absolute;
+    width: 33px;
+    height: 60px;
+    background: url("../images/door.png");
+    bottom: 22px;
+    left: 188px;
+    visibility: hidden;
+    animation: crash 1.2s 14.5s;
+}
+.lovers {
+    position: absolute;
+    background: url("../images/lovers.png");
+    width: 60px;
+    height: 120px;
+    right: 410px;
+    top: -40px;
+    transform: rotate(-10deg);
+    transition: all .5s linear;
+}
+.mario {
+    position: absolute;
+    background: 0 52px url("../images/mario.png") no-repeat;
+    width: 40px;
+    height: 60px;
+    right: 380px;
+    bottom: 376px;
+    z-index: 4;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+.mario:hover {
+    background-position: 0 0;
+}
+.mario-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    padding-top: 35px;
+    text-align: center;
+    bottom: 50px;
+    left: 35px;
+    font-size: 0;
+    background: url("../images/message.png");
+    transition: opacity, width, height .5s ease;
+}
+.mario-msg::before {
+    content: "I'm climbing!";
+}
+.mario:hover .mario-msg {
+    opacity: 1;
+    width: 180px;
+    height: 110px;
+    font-size: 1em;
+    transition: all .5s ease;
+}
+.cat {
+    position: absolute;
+    background: url("../images/cat.png");
+    width: 80px;
+    height: 100px;
+    right: 110px;
+    top: 70px;
+    transform: rotate(60deg);
+    transition: all .5s linear;
+}
+.snow {
+    position: absolute;
+    background: url("../images/snow.png");
+    width: 100px;
+    height: 155px;
+    right: 80px;
+    top: -80px;
+    transform: rotate(10deg);
+    transition: all .7s linear;
+}
+.bunny {
+    position: absolute;
+    background: url("../images/bunny.png");
+    width: 60px;
+    height: 140px;
+    right: 270px;
+    top: -20px;
+    transition: all .3s linear;
+}
+.char {
+    width: 50px;
+    height: 62px;
+    position: absolute;
+    background: url("../images/char.png");
+    animation: walk 20s linear 2s;
+    transform: scale(0);
+    cursor: pointer;
+    z-index: 2;
+}
+.char-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    padding-top: 35px;
+    text-align: center;
+    bottom: 30px;
+    left: 50px;
+    font-size: 0;
+    background: url("../images/message.png");
+    transition: opacity, width, height .5s ease;
+}
+.char-msg::before {
+    content: "I'm coming home!";
+}
+.char:hover .char-msg {
+    opacity: 1;
+    width: 180px;
+    height: 110px;
+    font-size: 1em;
+    transition: all .5s ease;
+}
+.vehicle {
+    width: 400px;
+    height: 170px;
+    position: absolute;
+    left: -400px;
+    bottom: 30px;
+    background: url("../images/vehicle.png");
+    animation: ride 3.2s linear 4s;
+    cursor: pointer;
+    z-index: 3;
+}
+.vehicle-msg {
+    box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    text-align: center;
+    padding-top: 50px;
+    bottom: 130px;
+    left: 250px;
+    font-size: 0;
+    background: url("../images/message.png");
+    transition: opacity, width, height .5s ease;
+    z-index: 5;
+}
+.vehicle-msg::before {
+    content: "I'm driving!";
+}
+.vehicle:hover .vehicle-msg {
+    opacity: 1;
+    width: 250px;
+    height: 160px;
+    font-size: 1.4em;
+    transition: all .5s ease;
+}
+.wheel-1,
+.wheel-2 {
+    position: absolute;
+    animation: rotating .5s linear infinite;
+}
+.wheel-1 {
+    background: url("../images/wheel1.png");
+    width: 77px;
+    height: 77px;
+    right: 11px;
+    bottom: 0;
+}
+.wheel-2 {
+    background: url("../images/wheel2.png");
+    width: 83px;
+    height: 83px;
+    left: 38px;
+    bottom: 2px;
+}
+.imprint {
+    height: 100px;
+    position: absolute;
+    left: -1px;
+    width: 0;
+    bottom: 0;
+    animation: imprinting 2.4s linear 4.05s forwards;
+}
+.imp1,
+.imp2 {
+    height: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: #89af3e;
+}
+.imp1 {
+    top: 10px;
+    height: 16px;
+}
+.imp2 {
+    top: 44px;
+}
+.barrel {
+    width: 60px;
+    height: 90px;
+    position: absolute;
+    right: 250px;
+    bottom: 70px;
+    background: url("../images/barrel-fire.png") 0 0;
+    animation: rotating-bar linear 1.4s 5.67s forwards;
+    z-index: 2;
+}
+.boot {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 325px;
+    top: 140px;
+    background: url("../images/boot.png");
+    animation: throw 10s 15.5s linear;
+    z-index: 4;
+    visibility: hidden;
+}
+.window {
+    width: 1150px;
+    height: 1150px;
+    background: url("../images/window.png");
+    margin: auto;
+    position: relative;
+    top: -650px;
+    z-index: 5;
+    visibility: hidden;
+    animation: crash .1s 17s forwards;
+}
+
+/*Background size*/
+.cloud,
+.sun,
+.forest,
+.plane,
+.plane-msg,
+.house,
+.char-msg,
+.vehicle,
+.wheel-1,
+.wheel-2,
+.vehicle-msg,
+.boot,
+.window,
+.door,
+.smile,
+.lovers,
+.mario,
+.cat,
+.snow,
+.bunny,
+.squirrel,
+.running-cat,
+.running-cat-msg,
+.house-msg,
+.mario-msg {
+    background-size: 100% 100%;
+}
+
+/*Animation-play-state*/
+.plane:hover,
+.vehicle:hover,
+.vehicle:hover .wheel-1,
+.vehicle:hover .wheel-2,
+.vehicle:hover ~ .barrel,
+.vehicle:hover + .imprint {
+    animation-play-state: paused;
+}
